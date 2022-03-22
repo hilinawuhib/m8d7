@@ -1,6 +1,7 @@
 import supertest from "supertest";
 import { app } from "../app.js";
 import dotenv from "dotenv";
+
 import mongoose from "mongoose";
 dotenv.config();
 console.log(process.env.MONGO_URL);
@@ -24,8 +25,8 @@ describe("Testing the endpoints", () => {
     expect(response.body.message).toBe("Test success");
   });
   const validProduct = {
-    name: "Test product",
-    price: 900,
+    name: "Test product 2",
+    price: 350,
   };
   it("should test that the POST /products endpoint returns the newly created product", async () => {
     const response = await client.post("/products").send(validProduct);
