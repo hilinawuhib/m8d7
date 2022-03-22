@@ -42,6 +42,7 @@ describe("Testing the endpoints", () => {
     expect(response.status).toBe(400);
   });
   let createdProductId;
+
   it("should test that the GET /products endpoint returns the product we just created", async () => {
     const response = await client.get("/products");
     expect(response.status).toBe(200);
@@ -60,6 +61,16 @@ describe("Testing the endpoints", () => {
     const response = await client.get(`/products/777777777777777777777777`);
     expect(response.status).toBe(404);
   });
+//   it("should test that the DELETE/products/:createdId endpoint DELETE THE PRODUCT", async () => {
+//     const response = await client.get(`/products/${createdProductId}`);
+//     expect(response.status).toBe(204);
+//     expect(response.body.length).toBe(0);
+//     createdProductId = response.body[0]._id;
+//   });
+//   it("should test that the DELETE /products/:invalidId returns 404", async () => {
+//     const response = await client.get(`/products/777777777777777777777777`);
+//     expect(response.status).toBe(404);
+//   });
 
   afterAll(async () => {
     await mongoose.connection.dropDatabase();

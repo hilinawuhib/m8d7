@@ -16,6 +16,16 @@ productsRouter
 
     res.status(200).send(product);
   })
+//   .delete("/:id", async (req, res) => {
+//     const deletedProduct = await Product.findByIdAndDelete(req.params.id);
+
+//     if (deletedProduct) {
+//       res.status(204).send();
+//       return;
+//     }
+//     res.status(400).send(error);
+//   })
+
   .post("/", async (req, res) => {
     try {
       const product = new Product(req.body);
