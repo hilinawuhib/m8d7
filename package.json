@@ -1,0 +1,36 @@
+{
+  "name": "m8d7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest",
+    "watch": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --watchAll",
+    "start": "node ./src/index.js",
+    "dev": "nodemon -r dotenv/config ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hilinawuhib/m8d7.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hilinawuhib/m8d7/issues"
+  },
+  "homepage": "https://github.com/hilinawuhib/m8d7#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.7"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.0",
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.2"
+  }
+}
